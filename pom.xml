@@ -17,6 +17,7 @@
     <surefire-plugin.version>3.0.0</surefire-plugin.version>
     <!-- 配置构建uber-jar -->
     <quarkus.package.jar.type>uber-jar</quarkus.package.jar.type>
+    <lombok.version>1.18.38</lombok.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -86,12 +87,28 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.38</version>
+      <version>${lombok.version}</version>
     </dependency>
 
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${compiler-plugin.version}</version>
+        <configuration>
+          <compilerArgs>
+            <arg>-parameters</arg>
+          </compilerArgs>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
