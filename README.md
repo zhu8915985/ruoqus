@@ -164,3 +164,16 @@ chmod 755 runner
 *用 ❤️ 构建，为现代化 Java 应用开发而生*
 
 </div>
+
+
+<!-- Badge Links -->
+[contributors-shield]: https://img.shields.io/github/contributors/zhu8915985/ruoqus.svg?style=flat-square
+[contributors-url]: https://github.com/zhu8915985/ruoqus/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/zhu8915985/ruoqus.svg?style=flat-square
+[forks-url]: https://github.com/zhu8915985/ruoqus/network/members
+[stars-shield]: https://img.shields.io/github/stars/zhu8915985/ruoqus.svg?style=flat-square
+[stars-url]: https://github.com/zhu8915985/ruoqus/stargazers
+[issues-shield]: https://img.shields.io/github/issues/zhu8915985/ruoqus.svg?style=flat-square
+[issues-url]: https://github.com/zhu8915985/ruoqus/issues
+[license-shield]: https://img.shields.io/github/license/zhu8915985/ruoqus.svg?style=flat-square
+[license-url]: https://github.com/zhu8915985/ruoqus/blob/main/LICENSE
