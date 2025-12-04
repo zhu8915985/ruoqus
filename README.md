@@ -1,10 +1,29 @@
-# RuoYi-Quarkus
+# RuoQus
 
 <div align="center">
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+
+<p align="center">
+  <a href="https://trendshift.io/repositories/13209">
+    <img src="https://trendshift.io/api/badge/repositories/13209" alt="GitHub Trending">
+  </a>
+</p>
+
+
+<img src="image/favicon.ico" alt="Hongdux Logo" width="120" height="120">
+
 
 ### 基于 Quarkus 的 RuoYi 权限管理系统，更贴合云原生的 RuoYi 系统
 
 *采用 Quarkus 框架构建的 RuoYi 权限管理系统，提供用户认证、权限管理等核心功能。支持 Java Native，具备极致的启动速度和更低的资源消耗（更小的内存占用），是更贴合云原生的 RuoYi 系统*
+
+**[🇺🇸 English](README_EN.md)**  | **[🚀 在线体验](https://ruoqus.hongdux.com)** | **[🐛 问题反馈](https://github.com/zhu8915985/ruoqus/issues)** | **[💡 功能建议](https://github.com/zhu8915985/ruoqus/issues)**
 
 </div>
 
@@ -30,74 +49,11 @@
 - **配置简单**：通过 application.properties 简单配置即可运行
 - **跨域支持**：内置 CORS 配置，方便前后端分离开发
 
-## 🚀 快速开始
-
-## 📦 部署方式
-
-### 开发环境运行
-```bash
-# 克隆项目
-git clone https://github.com/your-repo/ruoyi-quarkus.git
-
-# 进入项目目录
-cd ruoyi-quarkus
-
-# 开发模式运行
-./mvnw quarkus:dev
-```
-
-### 生产环境打包
-```bash
-# JVM 模式打包
-./mvnw clean package
-
-# 运行应用
-java -jar target/quarkus-app/quarkus-run.jar
-```
-
-### 使用预编译的可执行文件
-项目 `runner` 目录下已提供预编译好的可执行文件，可直接运行：
-```bash
-# 进入 runner 目录
-cd runner
-
-# 直接运行预编译文件
-./ruoyi-quarkus-runner
-```
-
-### 原生镜像编译
-```bash
-# 编译为原生镜像
-./mvnw package -Pnative
-
-# 运行原生应用
-./target/ruoyi-quarkus-1.0.0-SNAPSHOT-runner
-```
-
-### 核心功能模块
-
-#### 用户认证模块
-- 用户登录/登出
-- JWT Token 生成与验证
-- 密码加密存储（BCrypt）
-
-#### 权限管理模块
-- 用户管理
-- 角色管理
-- 权限控制
-- 注解式权限验证
-
-#### 系统工具模块
-- IP 地址工具
-- 安全工具
-- Servlet 工具
-- 字符串处理工具
-
-### 使用组件
-- **后端框架**：Quarkus 3.15
-- **安全框架**：SmallRye JWT + Quarkus Security
-- **JSON 处理**：Jackson
-- **依赖注入**：CDI (Contexts and Dependency Injection)
+### 核心框架
+本项目为前后端分离架构，支持前后端独立部署，同时也支持前后端混合部署。
+- **前端架构**：前端采用Vue3、Element UI。
+- **后端架构**：quarkus 3.28 + quarkus-rest + smallrye-jwt
+- **数据存储**：MySQL 8.0 + Redis 
 
 ## 🚀 版本说明
 
@@ -108,18 +64,62 @@ cd runner
 - 基于角色的权限控制
 - RESTful API 接口
 
-### 企业版
-针对企业级应用需求，我们还提供了功能更全面的 Pro 版本，包含：
-- RuoYi 系统的完整功能模块
-- 更丰富的权限管理机制
-- 系统监控和日志管理
-- 数据字典和参数配置
-- 在线用户管理
-- 操作日志记录
-- 通知公告模块
-- 更多企业级功能特性
+### Pro版
+### 在线演示
+针对企业级应用需求，我们还提供了功能更全面的 Pro 版本
 
-如需获取 Pro 版本，请联系我们。
+- **使用serverless 无服务器部署，快速冷启动**
+- [ruoqus.hongdux.com](https://ruoqus.hongdux.com) (账号：admin 密码：admin123)
+
+功能：
+- RuoYi 系统的完整功能模块
+1. 用户管理：系统用户的配置与管理
+2. 部门管理：组织架构配置，支持树形结构展示与数据权限控制
+3. 岗位管理：用户职务配置
+4. 菜单管理：系统菜单、操作权限、按钮权限标识配置
+5. 角色管理：角色菜单权限分配，支持按部门划分数据范围权限
+6. 字典管理：固定数据维护功能
+7. 参数管理：系统运行参数动态配置
+8. 通知公告：系统消息发布与维护
+9. 操作日志：用户操作记录查询，包括异常日志追踪
+10. 登录日志：用户登录记录与异常监控
+11. 在线用户：当前在线用户状态监控
+12. 系统接口：基于业务代码自动生成API文档
+13. 服务监控：系统CPU、内存、磁盘等资源实时监控
+14. 缓存监控：Redis缓存信息查询与命令统计
+
+
+## 🚀 快速开始
+
+## 📦 服务启动
+
+### 社区版
+```bash
+# 开发模式运行
+mvn quarkus:dev
+# jar包构建
+mvn clean package
+# 原生镜像编译
+mvn package -Pnative
+```
+在runner/community目录下,已编译好原生镜像,解压ruoyi-quarkus-runner.zip
+```bash
+#在linux环境下直接运行
+chmod 755 ruoyi-quarkus-runner
+./ruoyi-quarkus-runner
+```
+
+### Pro版
+在runner/pro目录下,已编译好原生镜像,解压runner.zip
+```bash
+#在linux环境下直接运行
+执行ruoqus.sql创建数据库
+修改custom.properties配置信息
+chmod 755 runner
+./runner
+```
+
+如需获取 Pro 版本源码，请联系我们。
 
 ### 联系我们
 
