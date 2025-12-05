@@ -68,7 +68,7 @@
 ### 在线演示
 针对企业级应用需求，我们还提供了功能更全面的 Pro 版本
 
-- **使用serverless 无服务器部署，快速冷启动**
+- **使用serverless 无服务器部署，快速冷启动，空闲时不占用资源**
 - [ruoqus.hongdux.com](https://ruoqus.hongdux.com) (账号：admin 密码：admin123)
 
 功能：
