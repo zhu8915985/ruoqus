@@ -9,11 +9,15 @@
 [![MIT License][license-shield]][license-url]
 
 
-<p align="center">
-  <a href="https://trendshift.io/repositories/13209">
-    <img src="https://trendshift.io/api/badge/repositories/13209" alt="GitHub Trending">
-  </a>
-</p>
+[//]: # (<p align="center">)
+
+[//]: # (  <a href="https://trendshift.io/repositories/13209">)
+
+[//]: # (    <img src="https://trendshift.io/api/badge/repositories/13209" alt="GitHub Trending">)
+
+[//]: # (  </a>)
+
+[//]: # (</p>)
 
 
 <img src="image/favicon.ico" alt="Hongdux Logo" width="120" height="120">
